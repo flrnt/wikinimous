@@ -16,6 +16,17 @@
 </head>
 <body>
 
+<div class="navbar" style="background-color:#F8F8F8">
+  <ul class="list-inline" id="nav-link">
+    <li>
+      <%= link_to "Wikinimous", articles_path %>
+    </li>
+    <li>
+      <%= link_to "New article", new_article_path %>
+    </li>
+  </ul>
+</div>
+
 <%= yield %>
 
 </body>
