@@ -2,13 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  margin:0;
+}
+
+.navbar {
+  position:fixed;
+  background-color:aliceblue;
+  height:60px;
+  width:100%;
+}
+
 
 #nav-link a {
   color:#777777;
   font-size: 20px;
   text-decoration:none;
+  padding:10px;
 }
 
 #nav-link a:hover{
-  color:#666666;
+  color:black;
+}
+
+.post-content {
+  height:200px;
+  width:500px;
 }

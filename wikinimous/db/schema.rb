@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20151110094843) do
   create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.datetime "date"
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+    t.datetime "date",       default: '2015-11-10 10:55:18'
     t.integer  "timeread"
     t.string   "language"
   end
