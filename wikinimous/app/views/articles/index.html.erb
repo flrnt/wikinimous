@@ -1,10 +1,15 @@
-<% @articles.each do |article| %>
-  <%= link_to article_path(article) do %>
-    <h3><%= article.title%></h3>
-  <% end %>
-  <p>Wrote on <%= article.date.strftime('%d/%m/%Y')%> by Flrnt</p>
-  <p><i class="fa fa-clock-o"></i> <%= article.timeread %> min. read | <i class="fa fa-flag-o"></i> <%= article.language %></p>
-  <p><%= article.content%></p>
-
-  <hr>
-<%end%>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <% @articles.each do |article| %>
+        <%= link_to article_path(article) do %>
+          <h3><%= article.title.capitalize %></h3>
+        <% end %>
+        <p>Wrote on <%= article.date.strftime('%d/%m/%Y')%> by Flrnt</p>
+        <p><i class="fa fa-clock-o"></i> <%= article.timeread %> min. read | <i class="fa fa-flag-o"></i> <%= article.language %></p>
+        <p><%= article.content%></p>
+        <hr>
+      <%end%>
+    </div>
+  </div>
+</div>
