@@ -17,6 +17,7 @@ Article.create(
     content:Faker::Lorem.paragraph(10, true, 8),
     date: Faker::Time.between(720.days.ago, Time.now, :all),
     timeread: Faker::Number.between(3, 20),
+    language: %w(French English).sample,
   })
 end
 
