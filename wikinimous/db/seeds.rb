@@ -5,17 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# require "as-duration"
+# require 'faker'
 
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
-Article.create(title:"My awesome story", content:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta praesentium vero magnam labore voluptates voluptas ut nesciunt quas asperiores modi repellat, iste quam veniam enim quibusdam, excepturi maxime non.")
+20.times do
+Article.create(
+  {
+    title: Faker::Lorem.word,
+    content:Faker::Lorem.paragraph(10, true, 8),
+    date: Faker::Time.between(720.days.ago, Time.now, :all),
+  })
+end
+
