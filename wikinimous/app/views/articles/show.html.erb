@@ -1,2 +1,12 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.content %></p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1><%= @article.title.capitalize %></h1>
+      <p>by Flrnt</p>
+      <p><%= @article.date.strftime('%b %d, %Y')%></p>
+      <p><%= @article.content %></p>
+    </div>
+  </div>
+</div>
