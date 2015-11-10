@@ -8,6 +8,8 @@
 # require "as-duration"
 # require 'faker'
 
+Article.destroy_all
+
 20.times do
 Article.create(
   {
